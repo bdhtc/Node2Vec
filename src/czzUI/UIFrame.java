@@ -1,31 +1,5 @@
 package czzUI;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Menu;
-import java.awt.MenuBar;
-import java.awt.MenuItem;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Random;
-
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.JToolBar;
-import javax.swing.filechooser.FileNameExtensionFilter;
-
 import czz2D.CoordinateSystem;
 import czz2D.Point;
 import czz2D.PointSet;
@@ -41,6 +15,15 @@ import czzVector.IVector;
 import czzWord2Vec.Word2Vec;
 import czzWord2Vec.Word2Vec.ModelType;
 import czzWord2Vec.Word2Vec.TrainMethod;
+
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * 用户界面
