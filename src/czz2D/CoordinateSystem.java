@@ -46,15 +46,15 @@ public class CoordinateSystem {
 	/**
 	 * 构造方法*/
 	public CoordinateSystem(Container canvas, Point screenLT, float kx, float ky) {
-		this.pointList = new ArrayList<Point>();
-		this.viewPointList = new ArrayList<ViewPoint>();
-		pointSetList = new ArrayList<PointSet>();
-		viewPointSetList = new ArrayList<ViewPointSet>();
-		this.setCanvas(canvas);
-		this.screenLT = screenLT;
-		this.kx = kx;
-		this.ky = ky;
-	}
+        this.pointList = new ArrayList<>();
+        this.viewPointList = new ArrayList<>();
+        pointSetList = new ArrayList<>();
+        viewPointSetList = new ArrayList<>();
+        this.setCanvas(canvas);
+        this.screenLT = screenLT;
+        this.kx = kx;
+        this.ky = ky;
+    }
 	
 	/**
 	 * 获取画布*/

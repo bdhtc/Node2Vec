@@ -1,24 +1,26 @@
 package czzClusterAnalysis;
 
-import java.util.ArrayList;
-
 import czzVector.IVector;
+
+import java.util.ArrayList;
 
 /**
  * 聚类分析的类
- * @author CZZ*/
+ *
+ * @author CZZ
+ */
 public abstract class Cluster<T> {
 
-	/**
-	 * 等待聚类的节点*/
-	protected ArrayList<ClusterNode<T>> nodes;
+    /**
+     * 等待聚类的节点*/
+    protected ArrayList<ClusterNode<T>> nodes;
 	
 	/*================================方法 methods================================*/
 	
 	/**
 	 * 构造方法*/
 	public Cluster() {
-		nodes = new ArrayList<ClusterNode<T>>();
+        nodes = new ArrayList<>();
 	}
 	
 	/**

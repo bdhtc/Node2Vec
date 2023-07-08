@@ -2,6 +2,18 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/czz2D" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/czzClusterAnalysis" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/czzGraph" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/czzLog" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/czzMatrix" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/czzNode2Vec" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/czzSelectItem" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/czzUI" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/czzVector" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/czzWord2Vec" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>
