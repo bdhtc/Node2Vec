@@ -1,29 +1,30 @@
 package czzClusterAnalysis;
 
-import java.util.ArrayList;
-
 import czzSelectItem.Selector;
 import czzVector.IVector;
 
-/**
- * k均值聚类算法，继承自抽象类“聚类”*/
-public class KMeans<T> extends Cluster<T>{
+import java.util.ArrayList;
 
-	@Override
-	public boolean runCluster(int k) {
-		boolean ret = false;
-		int n = this.nodes.size();
-		if(n > 0 && k > 0 && k < n) {
-			int[] seeds = Selector.kInN(n, k);							//在0——n-1这n个编号中选择k个
-			int[] centerNum = new int[k];								//每个聚类中心有几个元素
-			int i, index, j;
-			ClusterNode<T> temp;
-			ArrayList<ClusterNode<T> > arr = new ArrayList<ClusterNode<T> >();			//质心
-			float minDistance, tempDistance;										//最小距离
-			int minIndex;
-			for(i = 0; i < k; i++) {
-				index = seeds[i];
-				this.nodes.get(index).label = i;					//选择k个中心节点作为初始
+/**
+ * k均值聚类算法，继承自抽象类“聚类”
+ */
+public class KMeans<T> extends Cluster<T> {
+
+    @Override
+    public boolean runCluster(int k) {
+        boolean ret = false;
+        int n = this.nodes.size();
+        if (k > 0 && k < n) {
+            int[] seeds = Selector.kInN(n, k);                            //在0——n-1这n个编号中选择k个
+            int[] centerNum = new int[k];                                //每个聚类中心有几个元素
+            int i, index, j;
+            ClusterNode<T> temp;
+            ArrayList<ClusterNode<T>> arr = new ArrayList<ClusterNode<T>>();            //质心
+            float minDistance, tempDistance;                                        //最小距离
+            int minIndex;
+            for (i = 0; i < k; i++) {
+                index = seeds[i];
+                this.nodes.get(index).label = i;                    //选择k个中心节点作为初始
 				temp = this.nodes.get(i);
 				this.nodes.set(i, this.nodes.get(index));
 				this.nodes.set(index, temp);

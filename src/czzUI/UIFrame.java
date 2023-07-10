@@ -251,29 +251,31 @@ public class UIFrame extends JFrame {
         embeddingButton.addActionListener(e -> {
             String walksFilePath = walskFile.getText();
             String embFilePath = embFile.getText();
-            if (walksFilePath.length() > 0 && embFilePath.length() > 0) {
-                Log.addMessage("Word2Vec嵌入词向量开始");
-                w2v = new Word2Vec<String>(Word2Vec.WordType.String, ModelType.Skip_gram, TrainMethod.HS, 5, 128, 5, 0.025f, 5, 3, 1);
-                w2v.init(walksFilePath, 1);
-                w2v.startTrainning();
-                models = w2v.getModels();
-                modelsName = new Integer[models.length];
-                for (int i = 0; i < models.length; i++) {
-                    if (w2v.getWordByIndex(i).equals("")) {
-                        modelsName[i] = Integer.parseInt("-" + i);            //没有名字的向量
-                        System.out.println("error :" + i);
-                    } else {
-                        modelsName[i] = Integer.parseInt(w2v.getWordByIndex(i));
-                    }
-                }
-                try {
-                    w2v.outputFile(embFilePath);
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
-                System.out.println("Word2Vec嵌入词向量完成");
-                Log.addMessage("Word2Vec嵌入词向量完成");
+            if (StringUtils.isBlank(walksFilePath) || StringUtils.isBlank(embFilePath)) {
+                return;
             }
+            Log.addMessage("Word2Vec嵌入词向量开始");
+            w2v = new Word2Vec<>(Word2Vec.WordType.String, ModelType.Skip_gram, TrainMethod.HS, 5, 128, 5, 0.025f, 5, 3, 1);
+            w2v.init(walksFilePath, 1);
+            w2v.startTrainning();
+            models = w2v.getModels();
+            modelsName = new Integer[models.length];
+            for (int i = 0; i < models.length; i++) {
+                if (w2v.getWordByIndex(i).equals("")) {
+                    modelsName[i] = Integer.parseInt("-" + i);            //没有名字的向量
+                    System.out.println("error :" + i);
+                } else {
+                    modelsName[i] = Integer.parseInt(w2v.getWordByIndex(i));
+                }
+            }
+            try {
+                w2v.outputFile(embFilePath);
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+            System.out.println("Word2Vec嵌入词向量完成");
+            Log.addMessage("Word2Vec嵌入词向量完成");
+
         });
 
         clusterButton.addActionListener(e -> {
@@ -284,7 +286,7 @@ public class UIFrame extends JFrame {
             }
             if (kCategories > 1 && models != null && models.length > 0 && modelsName != null && modelsName.length == models.length) {
                 Log.addMessage("k均值聚类分析开始");
-                cluster = new KMeans<Integer>();
+                cluster = new KMeans<>();
                 for (int i = 0; i < models.length; i++) {
                     cluster.addNode(modelsName[i], models[i]);
                 }
@@ -343,7 +345,7 @@ public class UIFrame extends JFrame {
                 n2v.setParams(1, 1, 80, 10);
                 ArrayList<List<Integer>> walks = n2v.simulate_walks();
                 System.out.print("Node2Vec遍历完成");
-                if (walks == null || (walks != null && walks.size() == 0)) {
+                if (CollectionUtils.isEmpty(walks)) {
                     System.out.println("，遍历序列存储在文件之中");
                 }
                 //上：图的遍历； 下：通过遍历序列学习节点的向量表示
