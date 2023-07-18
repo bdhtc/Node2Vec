@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="481bd667-35b4-4157-a1e0-eab3edb4e019" name="更改" comment="debug">
+      <change afterPath="$PROJECT_DIR$/CoOccur.edgelist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/karate_czz.emb" beforeDir="false" afterPath="$PROJECT_DIR$/karate_czz.emb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/czzClusterAnalysis/KMeans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/czzClusterAnalysis/KMeans.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/czzUI/UIFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/czzUI/UIFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/czzVector/IVector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/czzVector/IVector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/czzWord2Vec/Vocabulary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/czzWord2Vec/Vocabulary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/czzWord2Vec/Word2Vec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/czzWord2Vec/Word2Vec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/walks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/walks.txt" afterDir="false" />
     </list>
@@ -59,7 +58,7 @@
     &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -67,6 +66,7 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\job\java\Node2Vec" />
       <recent name="D:\job\java\Node2Vec\src" />
+      <recent name="D:\job\java\Node2Vec\PCA_matlab" />
     </key>
   </component>
   <component name="RunManager">
@@ -100,6 +100,11 @@
       <workItem from="1688900185315" duration="138000" />
       <workItem from="1688912785933" duration="2898000" />
       <workItem from="1688952609648" duration="8000" />
+      <workItem from="1688999216212" duration="100000" />
+      <workItem from="1689424947366" duration="3515000" />
+      <workItem from="1689560160203" duration="766000" />
+      <workItem from="1689600691952" duration="1824000" />
+      <workItem from="1689690695385" duration="4619000" />
     </task>
     <task id="LOCAL-00001" summary="debug">
       <option name="closed" value="true" />
@@ -149,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688827783001</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="debug">
+      <option name="closed" value="true" />
+      <created>1688999295199</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688999295199</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,20 +173,21 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="debug" />
     <option name="LAST_COMMIT_MESSAGE" value="debug" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/czzGraph/Graph.java</url>
-          <line>484</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/czzUI/UIFrame.java</url>
+          <line>259</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/czzUI/UIFrame.java</url>
-          <line>236</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/czzWord2Vec/Word2Vec.java</url>
+          <line>395</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

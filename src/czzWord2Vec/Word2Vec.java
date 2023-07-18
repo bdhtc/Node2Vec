@@ -243,7 +243,7 @@ public class Word2Vec<T> {
         this.vocabulary = new Vocabulary<T>(Vocabulary.WordType.Integer);
         this.vocabulary.loadVocabulary(words);
         this.vocabulary.sortVocabulary();            //词典中的词语按照词频从小到大排序
-        this.passags = new Passage<T>(PassageStorage.ArrayList, "");
+        this.passags = new Passage<>(PassageStorage.ArrayList, "");
         this.passags.loadSentences(words);
         this.vocabulary.frequencyFilter(minWordCount);                //过滤低频词
         if (this.trainMethod == TrainMethod.BOTH || this.trainMethod == TrainMethod.HS) {
@@ -395,6 +395,8 @@ public class Word2Vec<T> {
         int cw;                //CBOW上下文计数
         for (localIteratorNumber = 1; localIteratorNumber <= this.iteratorNumber; localIteratorNumber++) { //迭代次数
             for (int sentenceIndex = 0; sentenceIndex < this.passags.getSentenceCount(); sentenceIndex++) {
+                String format = String.format("%d/%d", sentenceIndex, this.passags.getSentenceCount());
+                System.out.println(format);
                 T[] sentence = null;
                 if (this.wordType == WordType.Integer) {
                     sentence = (T[]) this.passags.getNextSentenceInteger();
